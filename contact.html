@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — EBONY Lounge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-name gold-gradient">EBONY</div>
+    <div class="logo-sub">LOUNGE</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta-wrap"><a href="reservation.html" class="btn-gold nav-cta">Reserve</a></div>
+  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="events.html" onclick="closeMenu()">Events</a>
+  <a href="menu.html" onclick="closeMenu()">Menu</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="reservation.html" onclick="closeMenu()">Reserve</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=1920&q=80')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-content">
+    <span class="section-label">✦ Get in Touch</span>
+    <h1 class="page-title">CONTACT</h1>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="contact-split">
+
+      <!-- Info column -->
+      <div>
+        <div class="reveal">
+          <p class="section-label" style="margin-bottom:0.75rem;">✦ Find Us</p>
+          <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:var(--text);margin-bottom:2.5rem;">
+            We're here for <span class="gold-gradient">You</span>
+          </h2>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="contact-icon">📍</div>
+          <div>
+            <p class="section-label" style="margin-bottom:0.3rem;">Address</p>
+            <p style="color:var(--text-soft);font-size:0.9rem;line-height:1.6;">14 Rue des Palmiers<br>Alger Centre, Algeria</p>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">📞</div>
+          <div>
+            <p class="section-label" style="margin-bottom:0.3rem;">Phone</p>
+            <p style="color:var(--text-soft);font-size:0.9rem;">+213 21 XX XX XX</p>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <p class="section-label" style="margin-bottom:0.3rem;">Email</p>
+            <p style="color:var(--text-soft);font-size:0.9rem;">hello@ebonylounge.dz</p>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-top:1rem;">
+          <p class="section-label" style="margin-bottom:1rem;">Opening Hours</p>
+          <ul class="hours-list">
+            <li><span style="color:var(--muted);">Mon — Wed</span><span class="closed">Closed</span></li>
+            <li><span style="color:var(--muted);">Thursday</span><span class="open-hours">9 PM — 3 AM</span></li>
+            <li><span style="color:var(--muted);">Friday</span><span class="open-hours">9 PM — 5 AM</span></li>
+            <li><span style="color:var(--muted);">Saturday</span><span class="open-hours">9 PM — 5 AM</span></li>
+            <li><span style="color:var(--muted);">Sunday</span><span class="open-hours">8 PM — 2 AM</span></li>
+          </ul>
+        </div>
+
+        <div class="reveal" style="margin-top:2rem;">
+          <p class="section-label" style="margin-bottom:1rem;">Follow Us</p>
+          <div class="social-row">
+            <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+            <a href="#" class="social-btn" aria-label="Facebook">👤</a>
+            <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form column -->
+      <div class="reveal from-right">
+        <form class="card" id="contactForm" style="padding:2.5rem;border-radius:2px;" novalidate>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--text);margin-bottom:1.75rem;">Send a Message</h3>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="cName">Your Name</label>
+              <input class="form-input" type="text" id="cName" placeholder="John Doe" />
+              <div class="form-error" id="err-cName">Name is required</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cEmail">Email Address</label>
+              <input class="form-input" type="email" id="cEmail" placeholder="your@email.com" />
+              <div class="form-error" id="err-cEmail">Valid email required</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cSubject">Subject</label>
+            <select class="form-select" id="cSubject">
+              <option value="">Select a subject</option>
+              <option>Table Reservation</option>
+              <option>Event Enquiry</option>
+              <option>VIP Package</option>
+              <option>Private Event / Hire</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cMessage">Message</label>
+            <textarea class="form-textarea" id="cMessage" rows="5" placeholder="How can we help you?"></textarea>
+            <div class="form-error" id="err-cMessage">Message is required</div>
+          </div>
+
+          <button type="submit" class="btn-gold" style="width:100%;">Send Message →</button>
+        </form>
+
+        <!-- Success -->
+        <div class="card hidden" id="contactSuccess" style="padding:3rem 2rem;text-align:center;border-radius:2px;">
+          <div class="success-check">✓</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">Message Sent!</h3>
+          <p style="color:var(--muted);max-width:320px;margin:0 auto;line-height:1.7;">
+            Thank you for reaching out. Our team will get back to you within 24 hours.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-placeholder">
+  <span style="font-size:2rem;">📍</span>
+  <p style="color:var(--muted);font-size:0.9rem;">14 Rue des Palmiers, Alger Centre</p>
+  <a href="https://maps.google.com" target="_blank" rel="noopener"
+     style="color:var(--gold);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;text-decoration:none;">
+    Open in Google Maps →
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="gold-line"></div>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:1rem;">
+        <div class="logo-name gold-gradient" style="font-size:2rem;">EBONY</div>
+        <div class="logo-sub">LOUNGE</div>
+      </a>
+      <p style="color:var(--muted);font-size:0.83rem;line-height:1.7;max-width:260px;">Where luxury meets nightlife. An exclusive escape for those who demand nothing but the finest.</p>
+      <div class="social-row"><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">👤</a><a href="#" class="social-btn">🎵</a></div>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Navigation</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li>
+        <li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li>
+        <li><a href="reservation.html">Reservation</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Opening Hours</p>
+      <ul class="hours-list">
+        <li><span style="color:var(--muted);">Mon — Wed</span><span class="closed">Closed</span></li>
+        <li><span style="color:var(--muted);">Thursday</span><span class="open-hours">9 PM — 3 AM</span></li>
+        <li><span style="color:var(--muted);">Fri — Sat</span><span class="open-hours">9 PM — 5 AM</span></li>
+        <li><span style="color:var(--muted);">Sunday</span><span class="open-hours">8 PM — 2 AM</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="gold-line"></div>
+  <div class="footer-bottom">
+    <span>© 2025 EBONY Lounge. All rights reserved.</span>
+    <span style="opacity:0.5;">Crafted with excellence</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

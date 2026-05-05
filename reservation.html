@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservation — EBONY Lounge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="reservation">
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-name gold-gradient">EBONY</div>
+    <div class="logo-sub">LOUNGE</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta-wrap"><a href="reservation.html" class="btn-gold nav-cta">Reserve</a></div>
+  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="events.html" onclick="closeMenu()">Events</a>
+  <a href="menu.html" onclick="closeMenu()">Menu</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="reservation.html" onclick="closeMenu()">Reserve</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-content">
+    <span class="section-label">✦ Reserve Your Experience</span>
+    <h1 class="page-title">RESERVATION</h1>
+  </div>
+</div>
+
+<!-- FORM -->
+<section class="section">
+  <div class="container" style="max-width:800px;">
+
+    <!-- STEP INDICATOR -->
+    <div class="steps">
+      <div class="step-dot active" id="dot1">1</div>
+      <span class="step-label active" id="lbl1">Your Info</span>
+      <div class="step-connector" id="line1"></div>
+      <div class="step-dot" id="dot2">2</div>
+      <span class="step-label" id="lbl2">Details</span>
+      <div class="step-connector" id="line2"></div>
+      <div class="step-dot" id="dot3">3</div>
+      <span class="step-label" id="lbl3">Review</span>
+    </div>
+
+    <!-- STEP 1 — Personal Info -->
+    <div class="step-panel card" id="step1" style="padding:2.5rem;border-radius:2px;">
+      <p class="section-label" style="margin-bottom:0.5rem;">Step 1 of 3</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--text);margin-bottom:2rem;">Your Information</h2>
+
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label class="form-label" for="firstName">First Name</label>
+          <input class="form-input" type="text" id="firstName" placeholder="John" />
+          <div class="form-error" id="err-firstName">First name is required</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lastName">Last Name</label>
+          <input class="form-input" type="text" id="lastName" placeholder="Doe" />
+          <div class="form-error" id="err-lastName">Last name is required</div>
+        </div>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" placeholder="your@email.com" />
+          <div class="form-error" id="err-email">Valid email required</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone Number</label>
+          <input class="form-input" type="tel" id="phone" placeholder="+213 XX XX XX XX" />
+          <div class="form-error" id="err-phone">Phone number is required</div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:flex-end;margin-top:1rem;">
+        <button class="btn-gold" id="nextBtn1">Continue →</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 — Booking Details -->
+    <div class="step-panel card hidden" id="step2" style="padding:2.5rem;border-radius:2px;">
+      <p class="section-label" style="margin-bottom:0.5rem;">Step 2 of 3</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--text);margin-bottom:2rem;">Booking Details</h2>
+
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label class="form-label" for="date">Date</label>
+          <input class="form-input" type="date" id="date" />
+          <div class="form-error" id="err-date">Please select a date</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="guests">Number of Guests</label>
+          <select class="form-select" id="guests">
+            <option value="">Select guests</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7">7 Guests</option>
+            <option value="8">8 Guests</option>
+            <option value="9">9 Guests</option>
+            <option value="10">10 Guests</option>
+          </select>
+          <div class="form-error" id="err-guests">Please select number of guests</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Arrival Time</label>
+        <div class="time-grid">
+          <button class="time-slot" data-time="9:00 PM">9:00 PM</button>
+          <button class="time-slot" data-time="9:30 PM">9:30 PM</button>
+          <button class="time-slot" data-time="10:00 PM">10:00 PM</button>
+          <button class="time-slot" data-time="10:30 PM">10:30 PM</button>
+          <button class="time-slot" data-time="11:00 PM">11:00 PM</button>
+          <button class="time-slot" data-time="11:30 PM">11:30 PM</button>
+          <button class="time-slot" data-time="12:00 AM">12:00 AM</button>
+          <button class="time-slot" data-time="12:30 AM">12:30 AM</button>
+        </div>
+        <div class="form-error" id="err-time">Please select an arrival time</div>
+      </div>
+
+      <div class="form-group" style="margin-top:1.5rem;">
+        <label class="form-label">Table Type</label>
+        <div class="table-cards">
+          <button class="table-card" data-table="standard">
+            <span class="table-check">✓</span>
+            <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:4px;">Standard Table</div>
+            <div style="color:var(--gold);font-size:0.8rem;font-weight:600;margin-bottom:4px;">No minimum</div>
+            <div style="color:var(--muted);font-size:0.75rem;margin-bottom:8px;">Up to 4 guests</div>
+            <div class="table-perk">Prime floor access</div>
+            <div class="table-perk">Cocktail service</div>
+            <div class="table-perk">Reserved seating</div>
+          </button>
+          <button class="table-card" data-table="premium">
+            <span class="table-check">✓</span>
+            <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:4px;">Premium Table</div>
+            <div style="color:var(--gold);font-size:0.8rem;font-weight:600;margin-bottom:4px;">15,000 DZD min.</div>
+            <div style="color:var(--muted);font-size:0.75rem;margin-bottom:8px;">Up to 6 guests</div>
+            <div class="table-perk">Elevated section</div>
+            <div class="table-perk">Dedicated server</div>
+            <div class="table-perk">Welcome drinks</div>
+            <div class="table-perk">Priority entry</div>
+          </button>
+          <button class="table-card" data-table="vip">
+            <span class="table-popular">Most Popular</span>
+            <span class="table-check">✓</span>
+            <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:4px;">VIP Suite</div>
+            <div style="color:var(--gold);font-size:0.8rem;font-weight:600;margin-bottom:4px;">35,000 DZD min.</div>
+            <div style="color:var(--muted);font-size:0.75rem;margin-bottom:8px;">Up to 10 guests</div>
+            <div class="table-perk">Private booth</div>
+            <div class="table-perk">Personal host</div>
+            <div class="table-perk">Champagne arrival</div>
+            <div class="table-perk">Priority entry</div>
+            <div class="table-perk">Exclusive menu</div>
+          </button>
+        </div>
+        <div class="form-error" id="err-table">Please select a table type</div>
+      </div>
+
+      <div class="form-group" style="margin-top:1.5rem;">
+        <label class="form-label" for="notes">Special Requests (optional)</label>
+        <textarea class="form-textarea" id="notes" rows="3" placeholder="Allergies, special occasions, bottle preferences..."></textarea>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;margin-top:1rem;">
+        <button class="btn-outline" id="backBtn2">← Back</button>
+        <button class="btn-gold" id="nextBtn2">Review Booking →</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 — Review -->
+    <div class="step-panel card hidden" id="step3" style="padding:2.5rem;border-radius:2px;">
+      <p class="section-label" style="margin-bottom:0.5rem;">Step 3 of 3</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--text);margin-bottom:2rem;">Review & Confirm</h2>
+
+      <div class="form-grid-2">
+        <div>
+          <p class="section-label" style="margin-bottom:1rem;">Personal Details</p>
+          <table class="review-table">
+            <tr><td>Name</td><td id="rv-name">—</td></tr>
+            <tr><td>Email</td><td id="rv-email">—</td></tr>
+            <tr><td>Phone</td><td id="rv-phone">—</td></tr>
+          </table>
+        </div>
+        <div>
+          <p class="section-label" style="margin-bottom:1rem;">Booking Details</p>
+          <table class="review-table">
+            <tr><td>Date</td><td id="rv-date">—</td></tr>
+            <tr><td>Time</td><td id="rv-time">—</td></tr>
+            <tr><td>Guests</td><td id="rv-guests">—</td></tr>
+            <tr><td>Table</td><td id="rv-table">—</td></tr>
+            <tr class="hidden" id="rv-notes-row"><td>Requests</td><td id="rv-notes">—</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <p style="color:var(--muted);font-size:0.75rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+        By confirming, you agree to our reservation policy. A 48-hour cancellation notice is required.
+      </p>
+
+      <div style="display:flex;justify-content:space-between;margin-top:1.5rem;">
+        <button class="btn-outline" id="backBtn3">← Back</button>
+        <button class="btn-gold" id="submitBtn">Confirm Reservation ✓</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="hidden" id="success">
+      <div class="success-box card" style="border-radius:2px;">
+        <div class="success-check">✓</div>
+        <h2 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">Reservation Confirmed!</h2>
+        <p style="color:var(--muted);max-width:400px;margin:0 auto 0.5rem;line-height:1.7;">
+          Thank you, <strong id="success-name" style="color:var(--gold);">—</strong>. Your table at EBONY Lounge has been reserved.
+        </p>
+        <p style="color:var(--muted);font-size:0.85rem;margin-bottom:2rem;">
+          Confirmation sent to <span id="success-email" style="color:var(--gold);">—</span>
+        </p>
+        <a href="index.html" class="btn-outline">← Back to Home</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="gold-line"></div>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:1rem;">
+        <div class="logo-name gold-gradient" style="font-size:2rem;">EBONY</div>
+        <div class="logo-sub">LOUNGE</div>
+      </a>
+      <p style="color:var(--muted);font-size:0.83rem;line-height:1.7;max-width:260px;">Where luxury meets nightlife.</p>
+      <div class="social-row"><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">👤</a><a href="#" class="social-btn">🎵</a></div>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Navigation</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li>
+        <li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Opening Hours</p>
+      <ul class="hours-list">
+        <li><span style="color:var(--muted);">Mon — Wed</span><span class="closed">Closed</span></li>
+        <li><span style="color:var(--muted);">Thu — Fri</span><span class="open-hours">9 PM — 5 AM</span></li>
+        <li><span style="color:var(--muted);">Saturday</span><span class="open-hours">9 PM — 5 AM</span></li>
+        <li><span style="color:var(--muted);">Sunday</span><span class="open-hours">8 PM — 2 AM</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="gold-line"></div>
+  <div class="footer-bottom">
+    <span>© 2025 EBONY Lounge. All rights reserved.</span>
+    <span style="opacity:0.5;">Crafted with excellence</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
