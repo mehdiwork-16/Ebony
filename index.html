@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EBONY Lounge — Luxury Nightclub Experience</title>
+  <meta name="description" content="Experience the finest nightlife at EBONY Lounge. Premium cocktails, exclusive events, and unforgettable nights." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-name gold-gradient">EBONY</div>
+    <div class="logo-sub">LOUNGE</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta-wrap">
+    <a href="reservation.html" class="btn-gold nav-cta">Reserve</a>
+  </div>
+  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"       onclick="closeMenu()">Home</a>
+  <a href="events.html"      onclick="closeMenu()">Events</a>
+  <a href="menu.html"        onclick="closeMenu()">Menu</a>
+  <a href="about.html"       onclick="closeMenu()">About</a>
+  <a href="reservation.html" onclick="closeMenu()">Reserve</a>
+  <a href="contact.html"     onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+
+  <!-- Floating particles -->
+  <div class="particles">
+    <div class="particle" style="left:12%;top:35%;--dur:7s;--delay:0s"></div>
+    <div class="particle" style="left:25%;top:60%;--dur:9s;--delay:1s"></div>
+    <div class="particle" style="left:45%;top:25%;--dur:6s;--delay:0.5s"></div>
+    <div class="particle" style="left:65%;top:50%;--dur:8s;--delay:1.5s"></div>
+    <div class="particle" style="left:80%;top:30%;--dur:7.5s;--delay:0.3s"></div>
+    <div class="particle" style="left:88%;top:65%;--dur:10s;--delay:2s"></div>
+  </div>
+
+  <div class="hero-content">
+    <span class="section-label hero-label">✦ The Finest Nightclub Experience</span>
+    <h1 class="hero-title">
+      WELCOME<br><span class="shimmer">TO EBONY</span>
+    </h1>
+    <p class="hero-sub">Where darkness meets gold. An exclusive sanctuary for those who live after midnight.</p>
+    <div class="hero-btns">
+      <a href="reservation.html" class="btn-gold">Reserve a Table</a>
+      <a href="events.html" class="btn-outline">▶ &nbsp;View Events</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll"><div class="scroll-line"></div></div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-value gold-gradient">500+</div>
+      <div class="stat-label">Nights Hosted</div>
+    </div>
+    <div class="stat-item reveal delay-1">
+      <div class="stat-value gold-gradient">50K+</div>
+      <div class="stat-label">Happy Guests</div>
+    </div>
+    <div class="stat-item reveal delay-2">
+      <div class="stat-value gold-gradient">120+</div>
+      <div class="stat-label">Premium Spirits</div>
+    </div>
+    <div class="stat-item reveal delay-3">
+      <div class="stat-value gold-gradient">3</div>
+      <div class="stat-label">VIP Floors</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── UPCOMING EVENTS ── -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
+      <p class="section-label" style="margin-bottom:0.75rem;">✦ What's On</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:var(--text);">
+        Upcoming <span class="gold-gradient">Events</span>
+      </h2>
+    </div>
+
+    <div class="events-grid">
+      <!-- Event 1 -->
+      <div class="event-card card reveal">
+        <div class="event-card-img">
+          <img src="https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=700&q=80" alt="Noir Night" loading="lazy" />
+          <div class="event-img-overlay"></div>
+          <span class="event-tag">DJ Set</span>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">
+            <span>📅 SAT, MAY 10</span>
+            <span>🕙 10 PM</span>
+          </div>
+          <h3 class="event-title">NOIR NIGHT</h3>
+          <p class="event-desc">An all-black dress code evening with the finest DJ sets and premium bottle service.</p>
+          <a href="reservation.html" class="arrow-link">Reserve Your Spot →</a>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="event-card card reveal delay-1">
+        <div class="event-card-img">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=700&q=80" alt="Golden Hour" loading="lazy" />
+          <div class="event-img-overlay"></div>
+          <span class="event-tag">Live</span>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">
+            <span>📅 FRI, MAY 16</span>
+            <span>🕙 9 PM</span>
+          </div>
+          <h3 class="event-title">GOLDEN HOUR</h3>
+          <p class="event-desc">Live performances, champagne towers, and a night draped in gold under neon lights.</p>
+          <a href="reservation.html" class="arrow-link">Reserve Your Spot →</a>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="event-card card reveal delay-2">
+        <div class="event-card-img">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=700&q=80" alt="Deep House" loading="lazy" />
+          <div class="event-img-overlay"></div>
+          <span class="event-tag">Exclusive</span>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">
+            <span>📅 SAT, MAY 17</span>
+            <span>🕙 11 PM</span>
+          </div>
+          <h3 class="event-title">DEEP HOUSE SESSION</h3>
+          <p class="event-desc">Limited tickets. Deep house masters behind the decks — pure sonic luxury.</p>
+          <a href="reservation.html" class="arrow-link">Reserve Your Spot →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:3rem;">
+      <a href="events.html" class="btn-outline">View All Events</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT PREVIEW ── -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="about-split">
+      <!-- Image col -->
+      <div class="about-img-wrap reveal from-left">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=800&q=80" alt="EBONY Interior" loading="lazy" />
+          <div class="about-img-overlay"></div>
+        </div>
+        <div class="about-img-thumb">
+          <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=400&q=80" alt="EBONY Bar" loading="lazy" />
+        </div>
+        <div class="about-corner"></div>
+      </div>
+
+      <!-- Text col -->
+      <div class="reveal from-right">
+        <p class="section-label" style="margin-bottom:1rem;">✦ Our Story</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:1.25rem;">
+          A World Apart<br><span class="gold-gradient">From the Ordinary</span>
+        </h2>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">
+          EBONY Lounge was born from a vision — to create a space where every night becomes a memory. We curate experiences that blend world-class music, artisan cocktails, and an atmosphere unlike anything else.
+        </p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:1.75rem;">
+          From our hand-crafted cocktail menu to our meticulously designed interiors, every detail at EBONY speaks of exclusivity and passion.
+        </p>
+        <div class="about-perks">
+          <div class="perk-item">
+            <span class="perk-icon text-gold">⭐</span> Premium VIP Service
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon text-gold">🍸</span> 120+ Signature Drinks
+          </div>
+        </div>
+        <a href="about.html" class="btn-gold">Discover Our Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED DRINKS ── -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
+      <p class="section-label" style="margin-bottom:0.75rem;">✦ Crafted for You</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:var(--text);">
+        Signature <span class="gold-gradient">Cocktails</span>
+      </h2>
+    </div>
+
+    <div class="menu-grid reveal">
+      <div class="menu-item">
+        <div class="menu-item-line"></div>
+        <div class="menu-cat">Signature Cocktail</div>
+        <div class="menu-name">Ebony Noir</div>
+        <div class="menu-desc">Dark rum, espresso, black cardamom, activated charcoal, gold dust rim</div>
+        <div class="menu-price">1,800 DZD</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-line"></div>
+        <div class="menu-cat">Premium Cocktail</div>
+        <div class="menu-name">Golden Elixir</div>
+        <div class="menu-desc">Aged cognac, honey liqueur, 24k gold flakes, aromatic bitters</div>
+        <div class="menu-price">2,200 DZD</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-line"></div>
+        <div class="menu-cat">Craft Cocktail</div>
+        <div class="menu-name">Velvet Smoke</div>
+        <div class="menu-desc">Mezcal, smoky syrup, activated charcoal, black Himalayan salt rim</div>
+        <div class="menu-price">1,600 DZD</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-line"></div>
+        <div class="menu-cat">Champagne Blend</div>
+        <div class="menu-name">Rose Crystal</div>
+        <div class="menu-desc">Rosé champagne, elderflower, raspberry essence, edible crystal rim</div>
+        <div class="menu-price">2,800 DZD</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:3rem;">
+      <a href="menu.html" class="btn-outline">Explore Full Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ── -->
+<div class="cta-banner">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-glow"></div>
+  <div class="cta-content reveal">
+    <p class="section-label" style="margin-bottom:1.25rem;">✦ Limited Tables Available</p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;color:var(--text);margin-bottom:1.25rem;">
+      Secure Your<br><span class="shimmer">Night at EBONY</span>
+    </h2>
+    <p style="color:var(--text-soft);max-width:500px;margin:0 auto 2.5rem;line-height:1.7;">
+      VIP tables fill fast. Reserve yours now and step into an evening you won't forget.
+    </p>
+    <a href="reservation.html" class="btn-gold" style="font-size:0.75rem;padding:16px 48px;letter-spacing:0.25em;">
+      Reserve Now
+    </a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="gold-line"></div>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:1rem;">
+        <div class="logo-name gold-gradient" style="font-size:2rem;">EBONY</div>
+        <div class="logo-sub">LOUNGE</div>
+      </a>
+      <p style="color:var(--muted);font-size:0.83rem;line-height:1.7;max-width:260px;">
+        Where luxury meets nightlife. An exclusive escape crafted for those who demand nothing but the finest.
+      </p>
+      <div class="social-row">
+        <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+        <a href="#" class="social-btn" aria-label="Facebook">👤</a>
+        <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
+      </div>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Navigation</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Opening Hours</p>
+      <ul class="hours-list">
+        <li><span style="color:var(--muted);">Mon — Wed</span><span class="closed">Closed</span></li>
+        <li><span style="color:var(--muted);">Thursday</span><span class="open-hours">9 PM — 3 AM</span></li>
+        <li><span style="color:var(--muted);">Friday</span><span class="open-hours">9 PM — 5 AM</span></li>
+        <li><span style="color:var(--muted);">Saturday</span><span class="open-hours">9 PM — 5 AM</span></li>
+        <li><span style="color:var(--muted);">Sunday</span><span class="open-hours">8 PM — 2 AM</span></li>
+      </ul>
+      <p style="color:var(--muted);font-size:0.73rem;margin-top:1rem;">Minimum age 21+ · Dress code enforced</p>
+    </div>
+  </div>
+  <div class="gold-line"></div>
+  <div class="footer-bottom">
+    <span>© 2025 EBONY Lounge. All rights reserved.</span>
+    <span style="opacity:0.5;">Crafted with excellence</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
