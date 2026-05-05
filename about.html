@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — EBONY Lounge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-name gold-gradient">EBONY</div>
+    <div class="logo-sub">LOUNGE</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta-wrap"><a href="reservation.html" class="btn-gold nav-cta">Reserve</a></div>
+  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="events.html" onclick="closeMenu()">Events</a>
+  <a href="menu.html" onclick="closeMenu()">Menu</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="reservation.html" onclick="closeMenu()">Reserve</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=1920&q=80')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-content">
+    <span class="section-label">✦ Our Story</span>
+    <h1 class="page-title">ABOUT US</h1>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="section">
+  <div class="container">
+    <div class="about-split">
+      <div class="about-img-wrap reveal from-left">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=800&q=80" alt="EBONY Interior" loading="lazy" />
+          <div class="about-img-overlay"></div>
+        </div>
+        <div class="about-img-thumb">
+          <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=400&q=80" alt="EBONY Bar" loading="lazy" />
+        </div>
+        <div class="about-corner"></div>
+      </div>
+      <div class="reveal from-right">
+        <p class="section-label" style="margin-bottom:1rem;">✦ The Beginning</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;margin-bottom:1.5rem;">
+          Born from a<br><span class="gold-gradient">Vision of Luxury</span>
+        </h2>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">
+          EBONY Lounge was conceived in 2019 by founder Karim Benali — a vision to create the definitive premium nightlife experience in Algeria. A space where international sophistication meets local passion.
+        </p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">
+          The name EBONY speaks of our essence: deep, rich, and timeless. Like the precious wood, we stand for quality that endures, beauty that commands attention, and experiences that leave lasting impressions.
+        </p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:2rem;">
+          From our hand-selected spirits to our bespoke cocktail program crafted by internationally trained mixologists, every element of EBONY is designed to exceed expectation.
+        </p>
+        <a href="reservation.html" class="btn-gold">Reserve Your Table</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
+      <p class="section-label" style="margin-bottom:0.75rem;">✦ What Drives Us</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--text);">
+        Our <span class="gold-gradient">Values</span>
+      </h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card card reveal">
+        <div class="value-icon">⭐</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">Excellence</h3>
+        <p style="color:var(--muted);font-size:0.84rem;line-height:1.7;">Every detail is curated to the highest standard — from the music to the garnish on your glass.</p>
+      </div>
+      <div class="value-card card reveal delay-1">
+        <div class="value-icon">🍸</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">Craft</h3>
+        <p style="color:var(--muted);font-size:0.84rem;line-height:1.7;">Our mixologists are artists. Each cocktail is a composition of flavour, texture, and visual drama.</p>
+      </div>
+      <div class="value-card card reveal delay-2">
+        <div class="value-icon">🎵</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">Sound</h3>
+        <p style="color:var(--muted);font-size:0.84rem;line-height:1.7;">Music is our heartbeat. We partner with the finest DJs to deliver sonic experiences unmatched in the city.</p>
+      </div>
+      <div class="value-card card reveal delay-3">
+        <div class="value-icon">🤝</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">Community</h3>
+        <p style="color:var(--muted);font-size:0.84rem;line-height:1.7;">EBONY is more than a club — it's a community of people who share a passion for the exceptional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:0.75rem;">✦ Inside EBONY</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--text);">
+        The <span class="gold-gradient">Atmosphere</span>
+      </h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item tall">
+        <img src="https://images.unsplash.com/photo-1545128485-c400e7702796?w=600&q=80" alt="EBONY Club" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=600&q=80" alt="EBONY Lounge" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1561489396-888724a1543d?w=600&q=80" alt="EBONY Night" loading="lazy" />
+      </div>
+      <div class="gallery-item tall">
+        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" alt="EBONY DJ" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1471565661762-b9dfae862dbe?w=600&q=80" alt="EBONY Drinks" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="EBONY Event" loading="lazy" />
+      </div>
+      <div class="gallery-item tall">
+        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80" alt="EBONY Music" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="EBONY Dining" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
+      <p class="section-label" style="margin-bottom:0.75rem;">✦ The People Behind EBONY</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--text);">
+        Meet the <span class="gold-gradient">Team</span>
+      </h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-member reveal">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Karim Benali" loading="lazy" />
+          <div class="team-img-overlay"></div>
+        </div>
+        <div class="team-name">Karim Benali</div>
+        <div class="team-role">Founder & Director</div>
+      </div>
+      <div class="team-member reveal delay-1">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b332b67a?w=400&q=80" alt="Sofia Marrachi" loading="lazy" />
+          <div class="team-img-overlay"></div>
+        </div>
+        <div class="team-name">Sofia Marrachi</div>
+        <div class="team-role">Head Mixologist</div>
+      </div>
+      <div class="team-member reveal delay-2">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Yacine Aït" loading="lazy" />
+          <div class="team-img-overlay"></div>
+        </div>
+        <div class="team-name">Yacine Aït</div>
+        <div class="team-role">Resident DJ</div>
+      </div>
+      <div class="team-member reveal delay-3">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Lina Brahimi" loading="lazy" />
+          <div class="team-img-overlay"></div>
+        </div>
+        <div class="team-name">Lina Brahimi</div>
+        <div class="team-role">Events Director</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1545128485-c400e7702796?w=1920&q=80')"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-glow"></div>
+  <div class="cta-content reveal">
+    <p class="section-label" style="margin-bottom:1.25rem;">✦ Ready for Your Night?</p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;color:var(--text);margin-bottom:1.25rem;">
+      Experience <span class="shimmer">EBONY</span>
+    </h2>
+    <a href="reservation.html" class="btn-gold" style="font-size:0.75rem;padding:16px 48px;letter-spacing:0.25em;">Reserve Your Table</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="gold-line"></div>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:1rem;">
+        <div class="logo-name gold-gradient" style="font-size:2rem;">EBONY</div>
+        <div class="logo-sub">LOUNGE</div>
+      </a>
+      <p style="color:var(--muted);font-size:0.83rem;line-height:1.7;max-width:260px;">Where luxury meets nightlife. An exclusive escape for those who demand nothing but the finest.</p>
+      <div class="social-row"><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">👤</a><a href="#" class="social-btn">🎵</a></div>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Navigation</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li>
+        <li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li>
+        <li><a href="reservation.html">Reservation</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Opening Hours</p>
+      <ul class="hours-list">
+        <li><span style="color:var(--muted);">Mon — Wed</span><span class="closed">Closed</span></li>
+        <li><span style="color:var(--muted);">Thursday</span><span class="open-hours">9 PM — 3 AM</span></li>
+        <li><span style="color:var(--muted);">Fri — Sat</span><span class="open-hours">9 PM — 5 AM</span></li>
+        <li><span style="color:var(--muted);">Sunday</span><span class="open-hours">8 PM — 2 AM</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="gold-line"></div>
+  <div class="footer-bottom">
+    <span>© 2025 EBONY Lounge. All rights reserved.</span>
+    <span style="opacity:0.5;">Crafted with excellence</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

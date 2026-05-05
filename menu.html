@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — EBONY Lounge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="menu">
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-name gold-gradient">EBONY</div>
+    <div class="logo-sub">LOUNGE</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta-wrap"><a href="reservation.html" class="btn-gold nav-cta">Reserve</a></div>
+  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="events.html" onclick="closeMenu()">Events</a>
+  <a href="menu.html" onclick="closeMenu()">Menu</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="reservation.html" onclick="closeMenu()">Reserve</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1920&q=80')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-content">
+    <span class="section-label">✦ Crafted with Excellence</span>
+    <h1 class="page-title">THE MENU</h1>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="All">All</button>
+  <button class="filter-btn" data-filter="Signature">Signature Cocktails</button>
+  <button class="filter-btn" data-filter="Spirits">Premium Spirits</button>
+  <button class="filter-btn" data-filter="Champagne">Champagne</button>
+  <button class="filter-btn" data-filter="Non-Alcoholic">Non-Alcoholic</button>
+  <button class="filter-btn" data-filter="Shots">Shots</button>
+</div>
+
+<!-- MENU GRID -->
+<section class="section">
+  <div class="container">
+    <div class="menu-cards-grid">
+
+      <!-- SIGNATURE COCKTAILS -->
+      <div class="menu-card card reveal" data-category="Signature">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80" alt="Ebony Noir" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Staff Pick</span><span class="menu-tag">Strong</span></div>
+          <div class="menu-card-name">Ebony Noir</div>
+          <div class="menu-card-desc">Dark rum, espresso, black cardamom, activated charcoal, gold dust rim</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">1,800 DZD</span>
+            <span class="menu-card-cat">Signature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-1" data-category="Signature">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80" alt="Golden Elixir" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Exclusive</span></div>
+          <div class="menu-card-name">Golden Elixir</div>
+          <div class="menu-card-desc">Aged cognac, honey liqueur, 24k gold flakes, aromatic bitters</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">2,200 DZD</span>
+            <span class="menu-card-cat">Signature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-2" data-category="Signature">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1562599838-8cc871c241a5?w=600&q=80" alt="Velvet Smoke" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Smoky</span></div>
+          <div class="menu-card-name">Velvet Smoke</div>
+          <div class="menu-card-desc">Mezcal, smoky syrup, activated charcoal, black Himalayan salt rim</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">1,600 DZD</span>
+            <span class="menu-card-cat">Signature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal" data-category="Signature">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Rose Crystal" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Premium</span></div>
+          <div class="menu-card-name">Rose Crystal</div>
+          <div class="menu-card-desc">Rosé champagne, elderflower, raspberry essence, edible crystal rim</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">2,800 DZD</span>
+            <span class="menu-card-cat">Signature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-1" data-category="Signature">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80" alt="Midnight Bloom" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Color Changing</span></div>
+          <div class="menu-card-name">Midnight Bloom</div>
+          <div class="menu-card-desc">Gin, butterfly pea flower, lemon, lavender syrup — magically color-changing</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">1,900 DZD</span>
+            <span class="menu-card-cat">Signature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-2" data-category="Signature">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80" alt="Devil's Kiss" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Spicy</span></div>
+          <div class="menu-card-name">Devil's Kiss</div>
+          <div class="menu-card-desc">Tequila, jalapeño-infused agave, blood orange, smoked salt rim</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">2,000 DZD</span>
+            <span class="menu-card-cat">Signature</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PREMIUM SPIRITS -->
+      <div class="menu-card card reveal" data-category="Spirits">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600&q=80" alt="Hennessy XO" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Cognac</span></div>
+          <div class="menu-card-name">Hennessy XO</div>
+          <div class="menu-card-desc">Notes of chocolate, spice and flowers. Served with artisan ice sphere</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">6,500 DZD</span>
+            <span class="menu-card-cat">Spirits</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-1" data-category="Spirits">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=600&q=80" alt="Johnnie Walker Blue" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Whisky</span></div>
+          <div class="menu-card-name">Johnnie Walker Blue</div>
+          <div class="menu-card-desc">Exceptionally rare blended Scotch whisky — smooth, complex, unforgettable</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">5,800 DZD</span>
+            <span class="menu-card-cat">Spirits</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-2" data-category="Spirits">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=600&q=80" alt="Grey Goose" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Vodka</span></div>
+          <div class="menu-card-name">Grey Goose</div>
+          <div class="menu-card-desc">French vodka of exceptional purity, served ultra-chilled in a frosted glass</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">3,800 DZD</span>
+            <span class="menu-card-cat">Spirits</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAMPAGNE -->
+      <div class="menu-card card reveal" data-category="Champagne">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Moët & Chandon" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Bottle</span></div>
+          <div class="menu-card-name">Moët & Chandon Brut</div>
+          <div class="menu-card-desc">Iconic Champagne with vibrant intensity and seductive freshness</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">18,000 DZD</span>
+            <span class="menu-card-cat">Champagne</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-1" data-category="Champagne">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=600&q=80" alt="Veuve Clicquot Rosé" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Rosé</span><span class="menu-tag">Bottle</span></div>
+          <div class="menu-card-name">Veuve Clicquot Rosé</div>
+          <div class="menu-card-desc">Bold, structured and sensual rosé with notes of wild strawberry and cherry</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">22,000 DZD</span>
+            <span class="menu-card-cat">Champagne</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-2" data-category="Champagne">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1515362778563-6a8d0e44bc0b?w=600&q=80" alt="Dom Pérignon" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Vintage</span><span class="menu-tag">Bottle</span></div>
+          <div class="menu-card-name">Dom Pérignon 2013</div>
+          <div class="menu-card-desc">Prestige vintage Champagne — the absolute pinnacle of excellence</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">65,000 DZD</span>
+            <span class="menu-card-cat">Champagne</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NON-ALCOHOLIC -->
+      <div class="menu-card card reveal" data-category="Non-Alcoholic">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80" alt="Midnight Mocktail" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Zero Alcohol</span></div>
+          <div class="menu-card-name">Midnight Mocktail</div>
+          <div class="menu-card-desc">Sparkling elderflower, cucumber, mint, activated charcoal — stunning to look at</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">900 DZD</span>
+            <span class="menu-card-cat">Non-Alcoholic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-1" data-category="Non-Alcoholic">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=600&q=80" alt="Golden Sunrise" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Zero Alcohol</span></div>
+          <div class="menu-card-name">Golden Sunrise</div>
+          <div class="menu-card-desc">Fresh mango, passion fruit, ginger, turmeric, gold shimmer powder</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">850 DZD</span>
+            <span class="menu-card-cat">Non-Alcoholic</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHOTS -->
+      <div class="menu-card card reveal" data-category="Shots">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80" alt="Gold Rush" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Party</span></div>
+          <div class="menu-card-name">Gold Rush</div>
+          <div class="menu-card-desc">Goldschläger cinnamon schnapps with real gold flakes — liquid gold</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">800 DZD</span>
+            <span class="menu-card-cat">Shots</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card card reveal delay-1" data-category="Shots">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?w=600&q=80" alt="Black Velvet" loading="lazy" />
+          <div class="menu-card-img-overlay"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-tags"><span class="menu-tag">Flaming</span></div>
+          <div class="menu-card-name">Black Velvet</div>
+          <div class="menu-card-desc">Sambuca, blackcurrant liqueur — served flaming at your table</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">700 DZD</span>
+            <span class="menu-card-cat">Shots</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="reveal" style="text-align:center;color:var(--muted);font-size:0.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
+      All prices are per serving unless otherwise noted. Bottle service includes mixers and ice. Minimum age 21+.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="gold-line"></div>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:1rem;">
+        <div class="logo-name gold-gradient" style="font-size:2rem;">EBONY</div>
+        <div class="logo-sub">LOUNGE</div>
+      </a>
+      <p style="color:var(--muted);font-size:0.83rem;line-height:1.7;max-width:260px;">Where luxury meets nightlife. An exclusive escape for those who demand nothing but the finest.</p>
+      <div class="social-row"><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">👤</a><a href="#" class="social-btn">🎵</a></div>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Navigation</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li>
+        <li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li>
+        <li><a href="reservation.html">Reservation</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1.25rem;">Opening Hours</p>
+      <ul class="hours-list">
+        <li><span style="color:var(--muted);">Mon — Wed</span><span class="closed">Closed</span></li>
+        <li><span style="color:var(--muted);">Thursday</span><span class="open-hours">9 PM — 3 AM</span></li>
+        <li><span style="color:var(--muted);">Fri — Sat</span><span class="open-hours">9 PM — 5 AM</span></li>
+        <li><span style="color:var(--muted);">Sunday</span><span class="open-hours">8 PM — 2 AM</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="gold-line"></div>
+  <div class="footer-bottom">
+    <span>© 2025 EBONY Lounge. All rights reserved.</span>
+    <span style="opacity:0.5;">Crafted with excellence</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
