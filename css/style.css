@@ -117,31 +117,6 @@ body {
     repeating-linear-gradient(-60deg, rgba(200,121,60,0.025) 0, rgba(200,121,60,0.025) 1px, transparent 1px, transparent 40px);
 }
 
-/* ── AFRICAN GEOMETRIC STRIP ── */
-.african-strip {
-  height: 4px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--gold)      0px,  var(--gold)      7px,
-    var(--gold-dark) 7px,  var(--gold-dark) 12px,
-    transparent      12px, transparent      18px,
-    var(--gold)      18px, var(--gold)      21px,
-    var(--gold-dark) 21px, var(--gold-dark) 24px,
-    transparent      24px, transparent      32px
-  );
-  opacity: 0.65;
-}
-.african-strip-sm {
-  height: 2px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--gold)      0px,  var(--gold)      5px,
-    transparent      5px,  transparent      8px,
-    var(--gold-dark) 8px,  var(--gold-dark) 12px,
-    transparent      12px, transparent      16px
-  );
-  opacity: 0.5;
-}
 
 /* ── CARD ── */
 .card {
