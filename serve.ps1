@@ -14,6 +14,11 @@ $mime = @{
   ".jpeg" = "image/jpeg"
   ".svg"  = "image/svg+xml"
   ".ico"  = "image/x-icon"
+  ".pdf"  = "application/pdf"
+  ".webp" = "image/webp"
+  ".gif"  = "image/gif"
+  ".woff" = "font/woff"
+  ".woff2"= "font/woff2"
 }
 
 while ($listener.IsListening) {

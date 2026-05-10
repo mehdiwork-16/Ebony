@@ -147,21 +147,18 @@ body {
   border-bottom: 1px solid var(--border);
   box-shadow: 0 4px 30px rgba(0,0,0,0.6);
 }
-.nav-logo { text-decoration: none; display: flex; flex-direction: column; }
-.logo-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-  line-height: 1;
+.nav-logo { text-decoration: none; display: flex; align-items: center; }
+.logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
+  transition: opacity 0.3s;
 }
-.logo-sub {
-  font-size: 0.5rem;
-  letter-spacing: 0.38em;
-  color: rgba(200,121,60,0.65);
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-top: 2px;
+.logo-img:hover { opacity: 0.85; }
+.logo-img-footer {
+  height: 80px;
+  width: auto;
+  display: block;
 }
 .nav-links {
   display: flex;
@@ -334,11 +331,11 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 .hero-bg.loaded { transform: scale(1); }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(10,5,2,0.6) 0%, rgba(10,5,2,0.28) 45%, var(--black) 100%);
+  background: linear-gradient(180deg, rgba(5,3,2,0.72) 0%, rgba(5,3,2,0.38) 50%, var(--black) 100%);
 }
 .hero-glow {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 50% 65%, rgba(200,100,40,0.28) 0%, rgba(140,60,20,0.12) 45%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 55%, rgba(200,121,60,0.12) 0%, transparent 60%);
 }
 .hero-content { position: relative; z-index: 2; padding: 0 5%; max-width: 1000px; }
 .hero-label {
@@ -566,8 +563,8 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   text-align: center; overflow: hidden; min-height: 360px;
 }
 .page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
-.page-hero-overlay { position: absolute; inset: 0; background: rgba(10,5,2,0.78); }
-.page-hero-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 60%, rgba(200,100,40,0.22) 0%, rgba(140,60,20,0.1) 50%, transparent 70%); }
+.page-hero-overlay { position: absolute; inset: 0; background: rgba(5,3,2,0.80); }
+.page-hero-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 60%, rgba(200,121,60,0.10) 0%, transparent 60%); }
 .page-hero-content { position: relative; z-index: 2; }
 .page-title {
   font-family: 'Playfair Display', serif;
