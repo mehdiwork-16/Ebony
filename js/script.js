@@ -259,6 +259,133 @@ if (document.querySelector('[data-page="menu"]'))    initFilters('.filter-btn', 
   if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
 })();
 
+// ── HERO CHAR ANIMATION ─────────────────────
+(function initHeroChars() {
+  const title = document.querySelector('.hero-title');
+  if (!title) return;
+
+  // Walk child nodes to preserve <span class="shimmer"> etc.
+  function splitNode(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent;
+      const frag = document.createDocumentFragment();
+      text.split('').forEach((ch, i) => {
+        if (ch === ' ') {
+          frag.appendChild(document.createTextNode(' '));
+          return;
+        }
+        const span = document.createElement('span');
+        span.className = 'char';
+        span.textContent = ch;
+        span.style.animationDelay = (0.3 + i * 0.042) + 's';
+        frag.appendChild(span);
+      });
+      return frag;
+    }
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      const clone = node.cloneNode(false);
+      // Carry existing delay offset based on siblings already processed
+      node.childNodes.forEach(child => clone.appendChild(splitNode(child)));
+      return clone;
+    }
+    return node.cloneNode(true);
+  }
+
+  // Build offset counter across all text
+  let charOffset = 0;
+  function splitNodeWithOffset(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent;
+      const frag = document.createDocumentFragment();
+      text.split('').forEach(ch => {
+        if (ch === ' ' || ch === '\n') {
+          frag.appendChild(document.createTextNode(ch));
+          return;
+        }
+        const span = document.createElement('span');
+        span.className = 'char';
+        span.textContent = ch;
+        span.style.animationDelay = (0.25 + charOffset * 0.045) + 's';
+        charOffset++;
+        frag.appendChild(span);
+      });
+      return frag;
+    }
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      const clone = node.cloneNode(false);
+      node.childNodes.forEach(child => clone.appendChild(splitNodeWithOffset(child)));
+      return clone;
+    }
+    return node.cloneNode(true);
+  }
+
+  // Remove existing CSS animation so JS char animation takes over
+  title.style.animation = 'none';
+  title.style.opacity = '1';
+  title.style.transform = 'none';
+
+  const frag = document.createDocumentFragment();
+  title.childNodes.forEach(child => frag.appendChild(splitNodeWithOffset(child)));
+  title.innerHTML = '';
+  title.appendChild(frag);
+})();
+
+// ── SECTION HEADING WORD-SPLIT ──────────────
+(function initWordSplit() {
+  // Target h2 elements in section headings (not inside hero)
+  const headings = document.querySelectorAll('.section h2, .section-dark h2, .cta-banner h2');
+  if (!headings.length) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      el.querySelectorAll('.word-inner').forEach((wi, i) => {
+        setTimeout(() => wi.classList.add('reveal-word'), i * 80);
+      });
+      io.unobserve(el);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  headings.forEach(h2 => {
+    // Walk child nodes: split text nodes into words, preserve spans
+    function wrapWords(node) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const words = node.textContent.split(/(\s+)/);
+        const frag = document.createDocumentFragment();
+        words.forEach(w => {
+          if (/^\s+$/.test(w) || w === '') {
+            frag.appendChild(document.createTextNode(w));
+            return;
+          }
+          const outer = document.createElement('span');
+          outer.className = 'word';
+          const inner = document.createElement('span');
+          inner.className = 'word-inner';
+          inner.textContent = w;
+          outer.appendChild(inner);
+          frag.appendChild(outer);
+        });
+        return frag;
+      }
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        const clone = node.cloneNode(false);
+        node.childNodes.forEach(child => clone.appendChild(wrapWords(child)));
+        return clone;
+      }
+      return node.cloneNode(true);
+    }
+
+    const frag = document.createDocumentFragment();
+    h2.childNodes.forEach(child => frag.appendChild(wrapWords(child)));
+    h2.innerHTML = '';
+    h2.appendChild(frag);
+    h2.classList.add('split-words');
+
+    io.observe(h2);
+  });
+})();
+
 // ── CONTACT FORM ───────────────────────────
 (function initContact() {
   const form = document.getElementById('contactForm');
