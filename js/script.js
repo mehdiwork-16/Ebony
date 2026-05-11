@@ -2,6 +2,15 @@
    EBONY LOUNGE — Main Script
    ═══════════════════════════════════════════ */
 
+// ── BACK TO TOP VISIBILITY ─────────────────
+(function initFloatTop() {
+  const btn = document.getElementById('floatTop');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 300);
+  }, { passive: true });
+})();
+
 // ── NAVBAR SCROLL ──────────────────────────
 const navbar = document.getElementById('navbar');
 if (navbar) {

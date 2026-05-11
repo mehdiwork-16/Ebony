@@ -31,6 +31,13 @@
   <a href="contact.html" onclick="closeMenu()">Contact</a>
 </div>
 
+<!-- BACK BAR -->
+<div class="back-btn-bar">
+  <div class="back-btn-wrap">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+</div>
+
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=1920&q=80')"></div>
@@ -60,21 +67,21 @@
           <div class="contact-icon">📍</div>
           <div>
             <p class="section-label" style="margin-bottom:0.3rem;">Address</p>
-            <p style="color:var(--text-soft);font-size:0.9rem;line-height:1.6;">14 Rue des Palmiers<br>Alger Centre, Algeria</p>
+            <p style="color:var(--text-soft);font-size:0.9rem;line-height:1.6;">ul. Mokotowska 25<br>00-560 Warszawa, Poland</p>
           </div>
         </div>
         <div class="contact-item reveal">
           <div class="contact-icon">📞</div>
           <div>
             <p class="section-label" style="margin-bottom:0.3rem;">Phone</p>
-            <p style="color:var(--text-soft);font-size:0.9rem;">+213 21 XX XX XX</p>
+            <p style="color:var(--text-soft);font-size:0.9rem;">+48 22 XXX XX XX</p>
           </div>
         </div>
         <div class="contact-item reveal">
           <div class="contact-icon">✉️</div>
           <div>
             <p class="section-label" style="margin-bottom:0.3rem;">Email</p>
-            <p style="color:var(--text-soft);font-size:0.9rem;">hello@ebonylounge.dz</p>
+            <p style="color:var(--text-soft);font-size:0.9rem;">hello@ebonylounge.pl</p>
           </div>
         </div>
 
@@ -155,7 +162,7 @@
 <!-- MAP -->
 <div class="map-placeholder">
   <span style="font-size:2rem;">📍</span>
-  <p style="color:var(--muted);font-size:0.9rem;">14 Rue des Palmiers, Alger Centre</p>
+  <p style="color:var(--muted);font-size:0.9rem;">ul. Mokotowska 25, Warszawa</p>
   <a href="https://maps.google.com" target="_blank" rel="noopener"
      style="color:var(--gold);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;text-decoration:none;">
     Open in Google Maps →
@@ -197,6 +204,10 @@
     <span style="opacity:0.5;">Crafted with excellence</span>
   </div>
 </footer>
+
+<!-- Floating buttons -->
+<a href="https://wa.me/48221234567" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<button class="float-top" id="floatTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script src="js/script.js"></script>
 </body>
