@@ -111,10 +111,25 @@ body {
 .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 .section { padding: 6rem 0; }
 .section-dark {
-  background: var(--dark);
-  background-image:
-    repeating-linear-gradient(60deg, rgba(200,121,60,0.025) 0, rgba(200,121,60,0.025) 1px, transparent 1px, transparent 40px),
-    repeating-linear-gradient(-60deg, rgba(200,121,60,0.025) 0, rgba(200,121,60,0.025) 1px, transparent 1px, transparent 40px);
+  position: relative;
+  background-color: var(--dark);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.section-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 3, 2, 0.91);
+  pointer-events: none;
+  z-index: 0;
+}
+.section-dark > .container,
+.section-dark > div {
+  position: relative;
+  z-index: 1;
 }
 
 
