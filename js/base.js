@@ -78,15 +78,7 @@ function closeMenu() {
   setTimeout(() => bg.classList.add('loaded'), 100);
 })();
 
-// ── HERO PARALLAX ──────────────────────────
-(function heroParallax() {
-  const bg = document.querySelector('.hero-bg');
-  if (!bg) return;
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    bg.style.transform = `translateY(${y * 0.35}px) scale(1)`;
-  }, { passive: true });
-})();
+// ── HERO PARALLAX (disabled) ──────────────
 
 // ── FILTER TABS (used by events + menu pages) ──
 function initFilters(filterSelector, cardSelector, dataAttr) {
