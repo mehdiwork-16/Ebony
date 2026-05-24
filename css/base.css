@@ -686,8 +686,8 @@ footer { background: var(--dark); border-top: 1px solid rgba(200,121,60,0.15); }
 .cta-overlay { position: absolute; inset: 0; background: rgba(8,4,2,0.84); }
 .cta-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(200,100,40,0.24) 0%, rgba(140,60,20,0.10) 50%, transparent 70%); }
 .cta-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
-.cta-content h2 { color: #F7EFE3; }
-.cta-content p  { color: rgba(200,184,154,0.85); }
+.cta-content h2 { color: #F7EFE3 !important; }
+.cta-content p  { color: rgba(200,184,154,0.85) !important; }
 
 /* ── PAGE HERO (stays dark) ── */
 .page-hero {
