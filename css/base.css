@@ -760,6 +760,83 @@ footer { background: var(--dark); border-top: 1px solid rgba(200,121,60,0.15); }
 .float-top.visible { opacity: 1; pointer-events: all; }
 .float-top:hover { transform: translateY(-3px) scale(1.08); box-shadow: 0 8px 24px rgba(200,121,60,0.50); }
 
+/* ── PAGE PRELOADER ── */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #080302;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.9s ease, visibility 0.9s ease;
+}
+#preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.preloader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.preloader-logo {
+  height: 90px;
+  width: auto;
+  display: block;
+  opacity: 0;
+  transform: scale(0.82) translateY(12px);
+  animation: preloaderLogoIn 0.9s cubic-bezier(0.22,1,0.36,1) forwards 0.15s;
+}
+@keyframes preloaderLogoIn {
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.preloader-bar {
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin-top: 1.4rem;
+  animation: preloaderBarGrow 0.8s ease forwards 0.85s;
+}
+@keyframes preloaderBarGrow {
+  to { width: 140px; }
+}
+.preloader-label {
+  font-size: 0.52rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(200,121,60,0.7);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: preloaderLabelIn 0.6s ease forwards 1.25s;
+}
+@keyframes preloaderLabelIn {
+  to { opacity: 1; }
+}
+.preloader-dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 2.8rem;
+}
+.preloader-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(200,121,60,0.35);
+  animation: preloaderDot 1.2s ease-in-out infinite;
+}
+.preloader-dots span:nth-child(2) { animation-delay: 0.2s; }
+.preloader-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes preloaderDot {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50%       { opacity: 1;    transform: scale(1.4); background: rgba(200,121,60,0.85); }
+}
+
 /* ── HIDDEN UTIL ── */
 .hidden { display: none !important; }
 

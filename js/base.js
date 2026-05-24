@@ -2,6 +2,44 @@
    EBONY LOUNGE — Base Script (all pages)
    ═══════════════════════════════════════════ */
 
+// ── PAGE PRELOADER ─────────────────────────
+(function initPreloader() {
+  // Inject preloader into DOM immediately
+  const overlay = document.createElement('div');
+  overlay.id = 'preloader';
+  overlay.innerHTML = `
+    <div class="preloader-inner">
+      <img src="img/logo-white.svg" alt="EBONY Lounge" class="preloader-logo" />
+      <div class="preloader-bar"></div>
+      <div class="preloader-label">Lounge</div>
+    </div>
+    <div class="preloader-dots">
+      <span></span><span></span><span></span>
+    </div>
+  `;
+  document.documentElement.style.overflow = 'hidden';
+  document.body.appendChild(overlay);
+
+  function hidePreloader() {
+    overlay.classList.add('hide');
+    document.documentElement.style.overflow = '';
+    setTimeout(() => { if (overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 950);
+  }
+
+  // Wait for page load + minimum display time
+  const minDisplay = 2200; // ms — enough to see the full animation
+  const startTime = Date.now();
+
+  window.addEventListener('load', () => {
+    const elapsed = Date.now() - startTime;
+    const remaining = Math.max(0, minDisplay - elapsed);
+    setTimeout(hidePreloader, remaining);
+  });
+
+  // Hard fallback — never block user more than 5s
+  setTimeout(hidePreloader, 5000);
+})();
+
 // ── BACK TO TOP VISIBILITY ─────────────────
 (function initFloatTop() {
   const btn = document.getElementById('floatTop');
