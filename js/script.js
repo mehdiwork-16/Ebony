@@ -268,8 +268,9 @@ if (document.querySelector('[data-page="menu"]'))    initFilters('.filter-btn', 
   if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
 })();
 
-// ── HERO CHAR ANIMATION ─────────────────────
-(function initHeroChars() {
+// ── HERO CHAR ANIMATION (disabled — using CSS fadeUp instead) ──
+(function initHeroChars() { return; // disabled
+(function initHeroChars_disabled() {
   const title = document.querySelector('.hero-title');
   if (!title) return;
 
