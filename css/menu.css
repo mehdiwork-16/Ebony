@@ -1,53 +1,5 @@
 /* ── MENU PAGE ── */
+/* Card styles live in base.css — this file only holds page-specific overrides */
 
-/* Full menu card grid */
-.menu-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.menu-card {
-  border-radius: var(--radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  background: var(--card);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-.menu-card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
-  border-color: var(--border-gold);
-}
-.menu-card-img { position: relative; height: 180px; overflow: hidden; flex-shrink: 0; }
-.menu-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
-.menu-card:hover .menu-card-img img { transform: scale(1.1) brightness(1.05); }
-.menu-card-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,5,2,0.65) 0%, transparent 55%); }
-.menu-card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
-.menu-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
-.menu-tag {
-  font-size: 0.52rem; font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--gold);
-  background: var(--gold-muted);
-  border: 1px solid var(--border-gold); padding: 2px 9px;
-  border-radius: 50px;
-}
-.menu-card-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem; font-weight: 700; color: var(--text);
-  margin-bottom: 0.4rem; transition: color 0.3s;
-}
-.menu-card:hover .menu-card-name { color: var(--gold); }
-.menu-card-desc { font-size: 0.76rem; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 0.8rem; }
-.menu-card-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  padding-top: 0.75rem; border-top: 1px solid var(--border);
-}
-.menu-card-price { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--gold); }
-.menu-card-cat { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .menu-cards-grid { grid-template-columns: repeat(2,1fr); }
-}
-@media (max-width: 768px) {
-  .menu-cards-grid { grid-template-columns: 1fr; }
-}
+/* Full-menu grid uses 3 columns (base default for .menu-cards-grid) */
+/* No extra rules needed — base.css handles everything */
