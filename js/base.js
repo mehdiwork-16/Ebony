@@ -71,13 +71,7 @@ function closeMenu() {
   els.forEach(el => io.observe(el));
 })();
 
-// ── HERO BG ZOOM ───────────────────────────
-(function heroZoom() {
-  const bg = document.querySelector('.hero-bg');
-  if (!bg) return;
-  setTimeout(() => bg.classList.add('loaded'), 100);
-})();
-
+// ── HERO BG ZOOM (disabled) ──────────────
 // ── HERO PARALLAX (disabled) ──────────────
 
 // ── FILTER TABS (used by events + menu pages) ──
