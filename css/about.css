@@ -1,0 +1,54 @@
+/* ── ABOUT PAGE ── */
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(4,1fr); grid-auto-rows: 160px; gap: 0.75rem; }
+.gallery-item { overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; display: block; }
+.gallery-item:hover img { transform: scale(1.1); }
+
+/* Team */
+.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+.team-member { text-align: center; }
+.team-img {
+  position: relative; height: 220px; border-radius: var(--radius); overflow: hidden;
+  margin-bottom: 0.85rem;
+  box-shadow: var(--shadow-sm);
+}
+.team-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s; }
+.team-member:hover .team-img img { transform: scale(1.08); }
+.team-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,5,2,0.55) 0%, transparent 50%); }
+.team-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: #F7EFE3; transition: color 0.3s; }
+.team-member:hover .team-name { color: var(--gold); }
+.team-role { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(200,184,154,0.65); margin-top: 4px; }
+
+/* Values */
+.values-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+.value-card {
+  text-align: center; padding: 2.5rem 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(200,121,60,0.15);
+  transition: var(--transition);
+  background: rgba(255,255,255,0.04);
+}
+.value-card:hover { background: rgba(200,121,60,0.06); border-color: rgba(200,121,60,0.35); transform: translateY(-3px); }
+.value-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  border: 1px solid rgba(200,121,60,0.28);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.2rem; font-size: 1.3rem;
+  transition: var(--transition);
+  background: rgba(200,121,60,0.06);
+}
+.value-card:hover .value-icon { background: rgba(200,121,60,0.12); border-color: rgba(200,121,60,0.6); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .gallery-grid  { grid-template-columns: repeat(3,1fr); }
+  .team-grid, .values-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 768px) {
+  .gallery-grid  { grid-template-columns: repeat(2,1fr); }
+  .team-grid     { grid-template-columns: repeat(2,1fr); }
+  .values-grid   { grid-template-columns: repeat(2,1fr); }
+}

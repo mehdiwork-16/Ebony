@@ -1,0 +1,31 @@
+/* ── CONTACT PAGE ── */
+
+.contact-split { display: grid; grid-template-columns: 2fr 3fr; gap: 4rem; align-items: start; }
+.contact-item {
+  display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.75rem;
+  padding: 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+.contact-item:hover { border-color: var(--border-gold); box-shadow: var(--shadow-md); }
+.contact-icon {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--gold-muted);
+  border: 1px solid var(--border-gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; flex-shrink: 0; color: var(--gold);
+}
+.map-placeholder {
+  height: 280px; background: var(--surface-2);
+  border-top: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.6rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .contact-split { grid-template-columns: 1fr; gap: 2.5rem; }
+}
