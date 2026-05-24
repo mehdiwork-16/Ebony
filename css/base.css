@@ -207,6 +207,7 @@ body {
   position: sticky;
   top: 76px;
   z-index: 39;
+  margin-top: 76px; /* offset for fixed navbar — prevents dark hero showing above the bar */
 }
 
 /* ── NAVBAR ── */
