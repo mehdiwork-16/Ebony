@@ -3,8 +3,24 @@
    ═══════════════════════════════════════════ */
 
 // ── PAGE PRELOADER ─────────────────────────
+// Shows only on: (1) first visit via direct link, (2) page refresh.
+// Skipped on in-session navigation (Events → Menu, etc.)
 (function initPreloader() {
-  // Inject preloader into DOM immediately
+  // Detect navigation type: 'reload' | 'navigate' | 'back_forward'
+  const navEntry = performance.getEntriesByType('navigation')[0];
+  const navType  = navEntry ? navEntry.type
+                 : (performance.navigation && performance.navigation.type === 1 ? 'reload' : 'navigate');
+
+  const isReload     = navType === 'reload';
+  const isFirstVisit = !sessionStorage.getItem('ebony_seen');
+
+  // Skip preloader for in-session page-to-page navigation
+  if (!isReload && !isFirstVisit) return;
+
+  // Mark session so subsequent navigations skip the preloader
+  sessionStorage.setItem('ebony_seen', '1');
+
+  // Build and inject overlay
   const overlay = document.createElement('div');
   overlay.id = 'preloader';
   overlay.innerHTML = `
@@ -26,17 +42,16 @@
     setTimeout(() => { if (overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 950);
   }
 
-  // Wait for page load + minimum display time
-  const minDisplay = 2200; // ms — enough to see the full animation
-  const startTime = Date.now();
+  const minDisplay = 2200;
+  const startTime  = Date.now();
 
   window.addEventListener('load', () => {
-    const elapsed = Date.now() - startTime;
+    const elapsed   = Date.now() - startTime;
     const remaining = Math.max(0, minDisplay - elapsed);
     setTimeout(hidePreloader, remaining);
   });
 
-  // Hard fallback — never block user more than 5s
+  // Hard fallback — never block the user more than 5s
   setTimeout(hidePreloader, 5000);
 })();
 
