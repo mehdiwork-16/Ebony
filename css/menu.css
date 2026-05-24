@@ -1,5 +1,116 @@
-/* ── MENU PAGE ── */
-/* Card styles live in base.css — this file only holds page-specific overrides */
+/* ── MENU PAGE — MINIMALIST ── */
 
-/* Full-menu grid uses 3 columns (base default for .menu-cards-grid) */
-/* No extra rules needed — base.css handles everything */
+.menu-section {
+  max-width: 860px;
+  margin: 0 auto 3.5rem;
+}
+
+/* Category header */
+.menu-section-head {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1px; /* flush with the list border */
+}
+.menu-section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.menu-section-title {
+  font-size: 0.58rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+}
+
+/* Item list */
+.menu-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+
+.menu-list-item {
+  padding: 1.35rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.25s ease;
+  cursor: default;
+}
+.menu-list-item:hover { background: var(--surface-2); }
+
+/* Left column → right border */
+.menu-list-item:nth-child(odd)  { border-right: 1px solid var(--border); }
+
+/* Last two items → no bottom border */
+.menu-list-item:nth-last-child(-n+2) { border-bottom: none; }
+
+/* Odd total count: lone last item spans both columns */
+.menu-list-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  border-right: none;
+  max-width: 50%;
+}
+
+.menu-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.menu-list-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  transition: color 0.3s;
+  line-height: 1.3;
+}
+.menu-list-item:hover .menu-list-name { color: var(--gold); }
+
+.menu-list-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  color: var(--gold);
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.menu-list-desc {
+  font-size: 0.73rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Note at bottom */
+.menu-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.72rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .menu-list { grid-template-columns: 1fr; }
+  .menu-list-item:nth-child(odd)  { border-right: none; }
+  .menu-list-item:last-child:nth-child(odd) { grid-column: auto; max-width: none; }
+  .menu-list-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .menu-list-item:last-child { border-bottom: none; }
+}
