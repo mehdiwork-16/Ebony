@@ -45,22 +45,10 @@ body {
 
 /* ── TYPOGRAPHY ── */
 .gold-gradient {
-  background: linear-gradient(135deg, #C8793C 0%, #E0964E 50%, #924E24 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--gold);
 }
 .shimmer {
-  background: linear-gradient(90deg, #924E24 0%, #E0964E 25%, #C8793C 50%, #E0964E 75%, #924E24 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 3s linear infinite;
-}
-@keyframes shimmer {
-  0%   { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  color: var(--gold);
 }
 .section-label {
   font-size: 0.65rem;
