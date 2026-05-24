@@ -161,13 +161,20 @@
 </section>
 
 <!-- MAP -->
-<div class="map-placeholder">
-  <span style="font-size:2rem;">📍</span>
-  <p style="color:var(--muted);font-size:0.9rem;">ul. Mokotowska 25, Warszawa</p>
-  <a href="https://maps.google.com" target="_blank" rel="noopener"
-     style="color:var(--gold);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;text-decoration:none;">
-    Open in Google Maps →
-  </a>
+<div class="map-section">
+  <iframe
+    class="map-iframe"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.5263!2d21.0156!3d52.2186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc9f6dc6adaf%3A0xb17cb7b7fc893e0c!2sMokotowska%2025%2C%2000-560%20Warszawa%2C%20Poland!5e0!3m2!1sen!2spl!4v1700000000000"
+    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade" title="EBONY Lounge location">
+  </iframe>
+  <div class="map-overlay-pill">
+    <span class="map-pin-dot"></span>
+    <div>
+      <p class="map-address">ul. Mokotowska 25, Warszawa</p>
+      <a href="https://maps.google.com/?q=Mokotowska+25,+Warszawa" target="_blank" rel="noopener" class="map-link">Open in Google Maps →</a>
+    </div>
+  </div>
 </div>
 
 <!-- FOOTER -->
